@@ -1,0 +1,186 @@
+#mainTitle {
+    color: Green;
+}
+
+p {
+    color: Black;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    /* 40px/16=2.5em */
+}
+
+h4 li {
+  padding-bottom: 10px;
+}
+
+/*p {
+    font-size: 20px;
+}
+*/
+
+.main-container {
+    margin-left: 5px;
+    margin-right: 5px;
+    top: 95px;
+}
+
+
+.radius-sm {
+    border-radius: 4px;
+}
+
+
+
+.common {
+    background-color: #434e61;
+}
+
+.about-container {
+    background-color: #4d3c3c;
+    height: 450px;
+}
+
+.portfolio-container {
+    background-color: #eee6e6;
+    height: 450px;
+}
+
+.projects-container {
+    background-color: #4d3c3c;
+    height: 450px;
+}
+
+.travel-container {
+    background-color: #eee6e6;
+    height: 450px;
+}
+
+.contact-container {
+    background-color: #4d3c3c;
+    height: 300px;
+}
+
+
+/*.container {
+    padding-top: 2px;
+    padding-right: 10px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+}*/
+
+p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 80px;
+    margin-left: 80px;
+    text-align: justify;
+
+}
+
+/*p:hover, h1:hover, h2:hover , img:hover {
+  background-color: yellow;
+}*/
+
+.toolbar .tool .label {
+    display: none
+}
+
+img {
+
+
+    border: none;
+    color: white;
+    opacity: 0.6;
+    transition: 0.2s;
+
+}
+
+img:hover {
+    opacity: 1
+}
+
+#pic-container {
+
+    padding: 20px;
+
+}
+
+#sim {
+  border-radius: 200px;
+}
+
+/*span:hover + div {
+  display: none;
+}
+*/
+
+#sidebar {
+    display: none;
+}
+
+img:hover~#sidebar {
+    display: block;
+}
+
+#sidebar:hover {
+    display: block;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+  
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: #eee6e6;
+  color: black;
+  transform: rotateX(180deg);
+}
+
+#linkedin-icon 

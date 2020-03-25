@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+   
+    <script>
+
+    function myFunction1() {
+  var elemntSummmary = document.getElementById("summary");
+  var btnSummary = document.getElementById("btn-summary");
+  if (elemntSummmary.innerHTML === "") {
+    elemntSummmary.innerHTML = "Infrastructure Developer with 2+ years of experience at JP Morgan Chase. Regularly configured and built servers with various requirements given by customers. Fast learnerand highly motivated to adopt new technologies,An extremely passionate formerElectrical Engineer who embraced the challenge of transitioning from BS in Electrical Engineering to MS in Computer Science. Seeking DevOps, Infrastructure, or Software Engineer positions,as well as having interest in Business Analyst opportunities. The highlightes in Sima's bachground are Puppet and Chef, Oracle SQL, SAS,R, and Tableau, Experience in Java Programming Language, Maven, Javaprograms,JUnitFramework, Agile environment, analyzing business, HTML5, CSS3, JavaScript, ColdFusion. Also Sima has different perofeshinal skillsaslike; Java, Python, Ruby, R, SQL,MySQL, DB2, MongoDB, NoSQLRESTful, WebService s, Eclipse, NetBeans, Visual Studio, Git, SVN,Unix Commands, Shell Scripting. Java Programming, Data Base Management System, Testing and Verification Algorithm and Data Structure, Distributed Systems Project Management whixh are courses that Sima passed in academic school in Franklin university";
+    btnSummary.innerHTML = "less"
+
+  } else {
+    elemntSummmary.innerHTML = "";
+     btnSummary.innerHTML = "More..."
+  }
+}
+       
+function myFunction2() {
+  var x = document.getElementById("hobby");
+  var btnHobby = document.getElementById("btn-hobby");
+  if (x.innerHTML === "") {
+    x.innerHTML ="Life is so short, so you are responsible about all days of your lives,To live will be an awfully big ADVENTURE.";
+    btnHobby.innerHTML = "less"
+
+            }
+            else {
+    x.innerHTML = "";
+     btnHobby.innerHTML = "More..."
+  }
+}
+
+function myFunction3() {
+  var x = document.getElementById("future Plan");
+  var btnfuturePlan = document.getElementById("btn-future Plan");
+    if (x.innerHTML === "") {
+    x.innerHTML = "Nobody can predict the future,Learn to enjoy every minute of your life.";
+      btnfuturePlan.innerHTML = "less"
+            }
+              else {
+     x.innerHTML = ""; 
+     btnfuturePlan.innerHTML = "More..."
+  }
+}
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  // add a zero in front of numbers<10
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
+  var t = setTimeout(function(){ startTime() }, 500);
+}
+
+function checkTime(i) {
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
+}
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <div id="main-container">
+     
+        <h1 id="mainTitle">
+            <center> Welcome to Sima Bashirian page </center>
+
+        </h1>
+        
+        <div class="container" id="summary-container">
+            <h2>SUMMARY</h2>
+            <p id="summary"></p>
+            
+            <ul>
+                <li><address>
+                        <a href=mailto:"sima.bashirian@gmail.com">sima.bashirian@gmail.com
+                        </a><br>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.linkedin.com/in/sima-bashirian-9658944b/"> LinkedIn</a><br>
+                </li>
+                </address>
+            </ul>
+            <button id="btn-summary" type="button" onclick="myFunction1()">More...</button>
+        </div>
+        <div class="container" id="hobby-container">
+            <h2>HOBBY</h2>
+            <p id="hobby"></p>
+            <ul>
+                <li>Traveling</li>
+                    <ul>
+                    <li>In 2018 visit<div id="sidebar">some thing</div>
+                     </ul>
+                <div id="pic-container">
+                <table>
+                	<tr>
+                		<td>
+
+                			<img id="tehran-pic" src="C:\Users\sima.bashirian\Desktop\portfolio\IRAN2018Pic\tehran.jpg" alt="Tehran" style="width:100px;height:100px;">
+                		</td>
+                		<td>
+                			<img id="ahvaz-pic" src="C:\Users\sima.bashirian\Desktop\portfolio\IRAN2018Pic\Ahvaz.jpg" alt="Ahvaz" style="width:100px;height:100px;">
+                		</td>
+                		<td>
+                			<img id="hamedan-pic" src="C:\Users\sima.bashirian\Desktop\portfolio\IRAN2018Pic\hamedan.jpg" alt="Hamedan" style="width:100px;height:100px;">
+                		</td>
+                	</tr>
+                	<tr>
+                	<div id="sidebar">Tehran</div>
+                		<td id="tehran-desc" style="visibility: hidden" >Tehran</td>
+                		<td id="ahvaz-desc" style="visibility: hidden">Ahvaz</td>
+                		<td id="hamedan-desc" style="visibility: hidden">Hamedan</td>
+                	</tr>
+                </table>
+                  
+                  </div>
+                
+                <li>Movies </li>
+                     <ul>
+                       <li>Sitcom Movies</li>
+                     </ul>
+                     <ul>
+                       <li>Series Movies</li>
+                     </ul>
+            </ul>
+            <button id="btn-hobby" type="button" onclick="myFunction2()">More...</button>
+            </div>
+             <div class="container" id="futurePlan-container">
+             <h2>Future Plan</h2>
+            <p id="future Plan"</p>
+            <ul>
+                <li>To Do</li>
+            </ul>
+            <button id="btn-future Plan" type="button" onclick="myFunction3()">More...</button>
+
+        </div>
+        
+        
+    </div>
+    <body onload="startTime()">
+
+<div id="txt"></div>
+</body>
+
+</html>
