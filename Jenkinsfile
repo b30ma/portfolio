@@ -1,13 +1,12 @@
 pipeline {
     agent {
-        dockerfile true
+        docker { image 'portfolio' }
     }
     stages {
-         stage('example') {
-             steps {
-                echo 'Hello World'
-                sh 'echo myCustomEnvVar = $myCustomEnvVar'
-             }
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
         }
     }
- }
+}
