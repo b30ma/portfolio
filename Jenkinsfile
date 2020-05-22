@@ -1,23 +1,19 @@
 pipeline {
-    agent any 
-    tools {
-        maven 'Maven_3_5_0'
+    agent {
+        dockerfile true
     }
-
     stages {
-        stage('Compile stage') {
-            steps {
-                sh "mvn clean compile" 
-        }
-    }
-
-         stage('testing stage') {
+         stage('example') {
              steps {
-                sh "mvn test"
+                echo 'Hello World'
+                sh 'echo myCustomEnvVar = $myCustomEnvVar'
+             }
         }
     }
+ }
+   
 
-          
+ 
 
   }
 
