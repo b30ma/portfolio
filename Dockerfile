@@ -1,6 +1,14 @@
 # Use the official image as a parent image
 FROM node:current-slim
 
+# set maintainer
+LABEL maintainer "sima.bashirian@gmail.com"
+
+# set a health check
+HEALTHCHECK --interval=5s \
+            --timeout=5s \
+            CMD curl -f http://127.0.0.1:8000 || exit 1
+
 # Set the working directory
 WORKDIR /usr/src/app
 
