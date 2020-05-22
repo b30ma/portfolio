@@ -1,12 +1,9 @@
-pipeline {
-    agent {
-        docker { build 'portfolio' }
-    }
-    stages {
-        stage('Test') {
-            steps {
-                sh 'node --version'
-            }
-        }
+node {
+    checkout scm
+
+    def customImage = docker.build("portfolio")
+
+    customImage.inside {
+        sh 'make test'
     }
 }
