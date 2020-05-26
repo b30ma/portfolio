@@ -16,7 +16,7 @@ node {
     stage('Run image') {
         
 
-        app = docker.image("simadock/portfolio").withRun('-p 3306:3306') {
+        docker.image("simadock/portfolio").withRun('-p 3306:3306') {
             /* do things */
         }
     }
