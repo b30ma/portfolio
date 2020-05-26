@@ -13,6 +13,14 @@ node {
         app = docker.build("simadock/portfolio")
     }
 
+    stage('Run image') {
+        
+
+        app = docker.image("simadock/portfolio").withRun('-p 3306:3306') {
+            /* do things */
+        }
+    }
+
     stage('Test image') {
         
         app.inside {
